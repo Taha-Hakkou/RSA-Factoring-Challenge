@@ -1,10 +1,10 @@
-#include "factors.h"
+#include "factorize.h"
 
 /**
- * main - 
- * @argc:
- * @argv:
- * Return:
+ * main - factors main program
+ * @argc: args count
+ * @argv: args vector
+ * Return: EXIT_SUCCESS on success, otherwise EXIT_FAILURE
  */
 int main(int argc, char **argv)
 {
@@ -37,42 +37,4 @@ int main(int argc, char **argv)
 		fprintf(stderr, "Usage: %s <file>\n", argv[0]);
 		exit(EXIT_FAILURE);
 	}
-}
-
-/**
- * factorize - 
- * @n:
- * Return:
- */
-void factorize(long int n)
-{
-	/*u_int32_t p, q, i;
-
-	for (i = 2; i < n; i++)
-		if (n % i == 0)
-		{
-			p = n / i;
-			q = i;
-		}
-	printf("%d=%d*%d\n", n, p, q);*/
-	long int f;
-
-if (n%2 == 0){
-	printf("%lu=%lu*%i\n", n, n/2, 2);
-	return;
-}
-
-f = 3;
-while (f*f <= n)
-{
-	if (n%f == 0){
-		printf("%lu=%lu*%lu\n", n, n/f, f);
-		return;
-	}
-	else{
-		f += 2;
-	}
-}
-printf("%lu=%lu*%i\n", n, n, 1);
-return;
 }

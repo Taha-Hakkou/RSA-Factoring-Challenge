@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -Wall -Werror -Wextra -pedantic -std=c89 rsa.c -o rsa
+gcc -Wall -Werror -Wextra -pedantic -std=c89 rsa.c factorize.c -o rsa
